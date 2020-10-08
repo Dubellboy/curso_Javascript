@@ -21,3 +21,4 @@ document.write(texto);
 
 //Aparecer no console do browser
 console.log(teste);
+
