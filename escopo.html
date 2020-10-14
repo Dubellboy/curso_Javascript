@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo</title>
+    <script>
+     //3 escopos= Global, função e de bloco
+     
+     //Escopo global todos acessam a variável
+     var serie = 'Friends';
+
+     if(true){
+         document.write(serie)
+     }
+
+     document.write('<hr />')
+
+     //Escopo da função somente a função tem acesso a variável serie3
+     function x () {
+         var serie3 = 'The walking dead'
+         document.write(serie3)
+     }
+
+     x();
+
+     document.write('<hr />')
+
+     
+
+
+
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

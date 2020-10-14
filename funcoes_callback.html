@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcções callback</title>
+    <script>
+        //Função anônima não precisa de nome
+     //Wrapper colocar a função dentro de uma variável
+
+    var exibirSaudacao = function(nome){
+         document.write('Olá ' + nome + ", tudo bem?")
+     }
+
+     exibirSaudacao('Eduardo');
+
+     document.write('<hr />')
+
+     //Função de Callback
+    //São funções que como parâmetros encaminham
+    //para outras funções usada mais em aplicações assincronas
+
+    function exibirArtigo(id, callbackSucesso, callbackErro) {
+        //Lógica: Recuperar o id via requisição http
+
+        if(true){
+            callbackSucesso('Funções de callback em JS', 'Função de callback são de muita utilidade...')
+        }else{
+            callbackErro('Erro ao recuperar os dados')
+        }
+    }
+        //Usando o wrapper, encapsular as funções dentro de variaveis
+
+        var callbackSucesso = function (titulo, descricao) {
+            document.write('<h1>  ' + titulo + '</h1>')
+            document.write('<hr />')
+            document.write('<p>' + descricao + '</p>')
+        }
+        var callbackErro = function (erro) {
+            document.write('<p><b>Erro:</b>' + erro + '</p>')
+        }
+        exibirArtigo(1, callbackSucesso, callbackErro);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

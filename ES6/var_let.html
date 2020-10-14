@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+        //3 Escopos 
+
+        //Variável global
+        var serie = 'Friends';
+
+        function x () {
+            var serie = 'Game of thrones'//Variável de bloco, somente para blocos dentro da função
+            console.log('função: ' + serie)
+
+            if (true) {
+                console.log('bloco dentro da função: ' + serie);
+            }
+        }
+
+        x()
+
+        if(true) {
+            console.log('Global: ' + serie)
+        }
+
+        if(true) {
+            let serie = 'Lucy'// Variável preserva o escopo onde a variável foi criada
+            console.log(serie);
+        }
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

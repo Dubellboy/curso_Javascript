@@ -11,6 +11,32 @@
            var area = largura * comprimento
             return area
         }*/
+
+        //void -> não fornece retorno
+        //retorno -> mostra o retorno da função
+
+        function calcularAreaTerreno(largura, comprimento){
+            //Lógica
+            var area = largura * comprimento
+            return area
+        }
+
+        //invocar a função
+        document.write('O terreno possuí ' + calcularAreaTerreno(15, 25) + ' metros quadrados.');//Informar parâmetros
+
+        document.write('<hr />');
+
+        var area = calcularAreaTerreno; // Salvar função em um variável.
+        document.write('O terreno possuí ' + calcularAreaTerreno(15, 25) + ' metros quadrados.');
+
+        //Ex.2
+        function soma(a,b){
+            return a + b 
+        }
+        console.log(soma(7,7));
+        console.log(soma(7,7,9,3))//Os dois últimos parâmetros serão ignorados sem dar erro
+        console.log(soma(7));//NaN
+        console.log(soma());//NaN
     </script> 
 </head>
 <body>
