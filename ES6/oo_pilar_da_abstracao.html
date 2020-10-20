@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+    //Class => Modelo da identidade
+
+    class ContaBancaria {
+        //Agência
+        //numeroConta
+        //saldo
+        //limite
+
+        constructor() {
+            //this antes do atributo para encapsular ao objeto classe
+            this.agencia = 1075
+            this.numeroConta = 8351125
+            this.saldo = 50
+            this.limite = 450
+
+        }
+        //Ações => Métodos
+        depositar(valorDeposito) {
+            this.saldo += valorDeposito
+        }
+        sacar(valorSaque){
+            this.saldo -= valorSaque
+        }
+        consultarSaldo() {
+            return this.saldo
+        }
+    }
+    //A partir do new se cria uma instância, entidade ou objeto
+    let x = new ContaBancaria()
+    let y = new ContaBancaria()
+
+    console.log(x.consultarSaldo());
+    x.sacar(10);
+    console.log(x.consultarSaldo());
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

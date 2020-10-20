@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+    class Tv  {
+        constructor(){
+            //Usar um _ (underscore) antes do atributo
+            // indica por convenção ele ser privado
+            this._relacaoCanais = Array(2, 4, 5, 7, 10);
+            this._canalAtivo = 5;
+            this._volume = 5;
+            
+        }
+        //getters (pegar) e setters (setar/ Alterar valores de atributos dentro da classe)
+        get canalAtivo() {
+            return this._canalAtivo
+        }
+        set canalAtivo(canal) {
+            //Usar o indesOf para ver se há o canal no array
+           if(this._relacaoCanais.indexOf(canal)!== -1) {
+            this._canalAtivo = canal
+           }
+                       
+        }
+
+    }
+    
+    let tv = new Tv()
+
+    tv.canalAtivo = 7;//Se colocar um canal que não existe mostrará o canal 5 que está fixado no atributo.
+    console.log(tv.canalAtivo);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

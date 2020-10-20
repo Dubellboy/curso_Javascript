@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+
+    //HERANÇA - Usar métodos ou atributos de classes diferentes mas que fazem a mesma coisa
+
+    class Animal {
+        constructor() {
+            this.cor = '';
+            this.tamanho = null;
+            this.peso = null;
+        }
+        dormir(){
+            console.log('Dormir')
+        }
+    }
+        //Usar a palavra EXTENDS e o nome da classe que vão herdar os atributos e métodos
+        class Cachorro extends Animal {
+            constructor(){
+                super()//Quando há relação de herança com a classe pai
+                this.orelhas = 'Grandes e caídas';
+            }
+            correr (){
+                console.log('Correr')
+            }
+          
+            rosnar(){
+                console.log('Rosnar')
+            }
+        }
+        class Passaro extends Animal {
+            constructor() {
+                super()
+                this.bico = 'Curto';
+            }
+            voar(){
+                console.log('Voar')
+            }
+        }
+
+        class Papagaio extends Passaro{
+            constructor() {
+                super()
+                this.saberFalar = true;
+            }
+            falar() {
+                console.log('Falar');
+            }
+        }
+        let cachorro = new Cachorro()
+        let passaro = new Passaro()
+        let papagaio = new Papagaio()
+
+        cachorro.dormir();
+        passaro.dormir();
+        papagaio.falar();
+        papagaio.dormir();
+        papagaio.voar();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template String</title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+
+        let nome = 'Jorge';
+
+        console.log('Oi ' + nome + ', tudo bem?')
+
+        //Modo com template string
+
+        console.log(`Oi ${nome}, tudo bem?`)
+
+        console.log(`7 + 7 =  ${7+7}`);//calcular
+
+        function calcular(x, y) {
+            return x * y
+        }
+        //Tamplate string na função
+        console.log(`À multiplicação de  8 * 8 é igual a:${calcular(8,8)}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

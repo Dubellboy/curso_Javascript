@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+
+    //Possibilidade de nomear nos parametros uma informção default caso não seja passada pelo usuário
+        function contarUmaHistoria (personagem = 'Dudu', atividade = 'corrida', nome_dono = 'João') {
+            document.write(`Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era ${nome_dono} e eles viveram felizes para sempre.`)
+        }
+
+        contarUmaHistoria('auau', 'pegar bola',' Carlos');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

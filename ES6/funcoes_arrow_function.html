@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+
+    let quadrado = function (x = 5){
+        return x * x
+    }
+
+    //Arrow funtion
+    let quadrado2 = (x) => {
+        return x * x
+    }
+
+    document.write( quadrado2(3) );
+    document.write('<hr />')
+
+    // Receber só um parâmetro return implícito
+    let soma = x =>  x + x
+    
+    document.write('Arrow function com um parâmetro = ' + soma(2))
+    document.write('<hr />')
+
+    //Função EC5 
+    let parOuImpar = function (numero){
+        if (numero % 2 === 0){
+            return 'Par'
+        }else {
+            return 'impar'
+        }
+    }
+    document.write(parOuImpar(7));
+    document.write('<hr />')
+
+    //Função com Arrow funtion
+    let parOuImpar2 =  numero => {
+        if (numero % 2 === 0){
+            return 'Par'
+        }else {
+            return 'impar'
+        }
+    }
+    document.write(parOuImpar2(4));
+    document.write('<hr />')
+
+    //Função com Arrow funtion com if ternário
+    let parOuImpar3 =  numero => numero % 2 === 0 ? 'Par' : 'ímpar'
+    
+    document.write('Arrow function com if ternário = ' + parOuImpar3(4));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
