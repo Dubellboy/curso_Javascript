@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+
+        let Bicicleta1 = {
+            cor:'Branca',
+            marcha: 'única',
+            aro: 12,
+
+            pedalar(){console.log('Método pedalar execultado.')}
+        }
+        
+        console.log(Bicicleta1);
+
+        let Bicicletafactory = function(cor, marcha, aro) {
+            return {
+                cor,
+                marcha,
+                aro,
+
+                pedalar() { console.log('Método pedalar execultado') }
+            }
+        }
+
+        let Bicicleta3 = Bicicletafactory('Vermelha', '18', 26);
+        console.log(Bicicleta3);
+
+        let Bicicleta4= Bicicletafactory('Preto', '21', 29);
+        console.log(Bicicleta4);
+
+        Bicicleta3.cor
+        Bicicleta3.pedalar()
+
+        Bicicleta4.cor
+        Bicicleta4.pedalar()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
