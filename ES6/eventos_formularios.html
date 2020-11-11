@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+    
+        
+    </script>
+</head>
+<body>
+    <input onfocus= "console.log('Com foco')" onblur = "console.log('perdeu o foco')"type="text">
+    <!--onfocus ação ocorre quando há foco no elemento-->
+    <!--onblur ação ocorre quando elemento perde o foco-->
+
+
+    <!--onchange ação ocorre quando o estado do elemento é modificado-->
+    <select onchange="console.log('Estado foi modificado')">
+        <option>--Selecione --</option>
+        <option value="1">--Primeira opção--</option>
+        <option value"2">--Segunda opção --</option>
+    </select>
+</body>
+</html>
