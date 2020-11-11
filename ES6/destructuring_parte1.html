@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--Instalar Babel babeljs.io -> setup -> standlone-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">//Script ficar dentro dessa Tag
+        //Operador de desestruturação tira valores de uma estrutura
+        //Array ou Objeto
+
+        // let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+        // //Desestruturar e trazer como variável
+
+        // let [a,b, , c] = frutas;//Pular um índice
+
+        //  console.log(a,b,c);
+
+        // let frutas2 = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+        // //Desestruturar e trazer como variável
+        
+        // let [a,b,c,d,e = 'Banana'] = frutas2;
+
+        // console.log(a,b,c,d,e);
+
+        let coisas = [['Abacaxi','Uva', 'Pera','Mamão'],['José', 'Maria']]
+        let [,[,n2]] = coisas
+
+        console.log(n2);
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
